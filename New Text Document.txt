@@ -1,4 +1,0 @@
-chmod +x orwa.sh
-
-https://fraudsight.fisglobal.com/
-https://favicon-hash.kmsec.uk/
