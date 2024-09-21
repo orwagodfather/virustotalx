@@ -78,7 +78,6 @@ else
   # Argument is not a file, treat it as a single domain
   domain=$(echo "$1" | sed 's|https\?://||')
   fetch_undetected_urls "$domain" $api_key_index
-x
 fi
 
 echo -e "\033[1;32mAll done!\033[0m"
