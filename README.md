@@ -1,4 +1,5 @@
 # virustotalx for endpoints 
+# virustotalx for IPs (V2)
 
 # Installation 
 
@@ -15,6 +16,11 @@ create a 3 accounts [https://www.virustotal.com/gui/join-us](https://www.virusto
 
 ```
 nano orwa.sh
+```
+&
+
+```
+nano orwaV2.sh
 ```
 
 paste 3 api keys here ....
@@ -46,9 +52,10 @@ paste 3 api keys here ....
 **next step**
 
 `chmod +x orwa.sh` 
+&
+`chmod +x orwaV2.sh` 
 
-
-# Usage
+# Usage orwa.sh for endpoints 
 
 Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s` 
 
@@ -65,4 +72,24 @@ Create sub domain file `EX` ===> `subdomain.txt`  ===> `wihtout http/s`
 ```
 cat results.txt | egrep 'http|https' > endpoints.txt
 ```
+
+
+# Usage orwaV2.sh for IPs (V2) 
+
+Create IPs file `EX` ===> `all-IP-range.txt`  ===> `wihtout http/s` 
+
+**===>**
+
+
+```
+./orwaV2.sh all-IP-range.txt | tee endpointsV2.txt 
+```
+
+**===>**
+
+
+```
+cat endpointsV2.txt | httpx -sc -title
+```
+
 
